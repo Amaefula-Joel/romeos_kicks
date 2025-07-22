@@ -1,58 +1,42 @@
-export const products = [
-    {
-        id: 1,
-        name: "White Air Max",
-        category: "Sneakers",
-        price: "₦18,000",
-        image: "https://picsum.photos/seed/shoe1/300/300",
-    },
-    {
-        id: 2,
-        name: "Black Leather Loafers",
-        category: "Formal",
-        price: "₦22,500",
-        image: "https://picsum.photos/seed/shoe2/300/300",
-    },
-    {
-        id: 3,
-        name: "Red Canvas Sneakers",
-        category: "Casual",
-        price: "₦14,000",
-        image: "https://picsum.photos/seed/shoe3/300/300",
-    },
-    {
-        id: 4,
-        name: "Men's Slide Sandals",
-        category: "Slides",
-        price: "₦8,500",
-        image: "https://picsum.photos/seed/shoe4/300/300",
-    },
-    {
-        id: 5,
-        name: "Women's Heeled Sandals",
-        category: "Women",
-        price: "₦16,000",
-        image: "https://picsum.photos/seed/shoe5/300/300",
-    },
-    {
-        id: 6,
-        name: "Running Sneakers",
-        category: "Sneakers",
-        price: "₦19,000",
-        image: "https://picsum.photos/seed/shoe6/300/300",
-    },
-    {
-        id: 7,
-        name: "Brown Oxford Shoes",
-        category: "Formal",
-        price: "₦24,000",
-        image: "https://picsum.photos/seed/shoe7/300/300",
-    },
-    {
-        id: 8,
-        name: "Everyday Flats",
-        category: "Women",
-        price: "₦11,500",
-        image: "https://picsum.photos/seed/shoe8/300/300",
-    },
-];
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+
+export default function Footer() {
+    return (
+        <footer className="bg-black text-white py-10 px-6 md:px-12">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Logo / About */}
+                <div>
+                    <h3 className="text-2xl font-bold mb-3 italic">RomeoKicks</h3>
+                    <p className="text-sm text-gray-400">
+                        Stylish shoes. Affordable prices. Delivered with care.
+                    </p>
+                </div>
+
+                {/* Navigation */}
+                <div>
+                    <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul className="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#hero" className="hover:text-red-400">Home</a></li>
+                        <li><a href="#featured" className="hover:text-red-400">Featured</a></li>
+                        <li><a href="#testimonials" className="hover:text-red-400">Testimonials</a></li>
+                        <li><a href="#contact" className="hover:text-red-400">Contact</a></li>
+                    </ul>
+                </div>
+
+                {/* Social Media */}
+                <div>
+                    <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div className="flex space-x-4 text-xl text-gray-400">
+                        <a href="https://wa.me/2348095723573" className="hover:text-red-400"><FaWhatsapp /></a>
+                        <a href="https://instagram.com/romeos_kicks" target="_blank" rel="noopener noreferrer" className="hover:text-red-400"><FaInstagram /></a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="text-center text-xs text-gray-500 mt-10 border-t pt-4 border-gray-700">
+                &copy; {new Date().getFullYear()} ShoeBay. All rights reserved.
+            </div>
+        </footer>
+    );
+}
