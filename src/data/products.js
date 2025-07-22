@@ -1,0 +1,58 @@
+export const products = [
+    {
+        id: 1,
+        name: "White Air Max",
+        category: "Sneakers",
+        price: "₦18,000",
+        image: "https://picsum.photos/seed/shoe1/300/300",
+    },
+    {
+        id: 2,
+        name: "Black Leather Loafers",
+        category: "Formal",
+        price: "₦22,500",
+        image: "https://picsum.photos/seed/shoe2/300/300",
+    },
+    {
+        id: 3,
+        name: "Red Canvas Sneakers",
+        category: "Casual",
+        price: "₦14,000",
+        image: "https://picsum.photos/seed/shoe3/300/300",
+    },
+    {
+        id: 4,
+        name: "Men's Slide Sandals",
+        category: "Slides",
+        price: "₦8,500",
+        image: "https://picsum.photos/seed/shoe4/300/300",
+    },
+    {
+        id: 5,
+        name: "Women's Heeled Sandals",
+        category: "Women",
+        price: "₦16,000",
+        image: "https://picsum.photos/seed/shoe5/300/300",
+    },
+    {
+        id: 6,
+        name: "Running Sneakers",
+        category: "Sneakers",
+        price: "₦19,000",
+        image: "https://picsum.photos/seed/shoe6/300/300",
+    },
+    {
+        id: 7,
+        name: "Brown Oxford Shoes",
+        category: "Formal",
+        price: "₦24,000",
+        image: "https://picsum.photos/seed/shoe7/300/300",
+    },
+    {
+        id: 8,
+        name: "Everyday Flats",
+        category: "Women",
+        price: "₦11,500",
+        image: "https://picsum.photos/seed/shoe8/300/300",
+    },
+];
