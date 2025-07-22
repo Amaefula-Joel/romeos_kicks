@@ -1,23 +1,26 @@
-// whyUs.js
 export const whyUs = [
     {
+        id: 1,
+        title: "Quality Guaranteed",
+        icon: "🥇",
+        description: "We handpick every pair to ensure you're getting premium shoes that last.",
+    },
+    {
+        id: 2,
+        title: "Fast Response & Delivery",
         icon: "🚚",
-        title: "Fast Delivery",
-        description: "Get your orders delivered to your doorstep within 2–3 days.",
+        description: "Chat with us directly on WhatsApp for quick order processing and fast local delivery.",
     },
     {
-        icon: "🛡️",
-        title: "Top Quality",
-        description: "We offer only original and durable shoes that last long.",
+        id: 3,
+        title: "Trendy & Affordable",
+        icon: "👟",
+        description: "From classic sneakers to the latest drops — all at prices that won't break the bank.",
     },
     {
-        icon: "💳",
-        title: "Secure Payments",
-        description: "We use trusted and secure payment gateways for your safety.",
-    },
-    {
-        icon: "📞",
-        title: "Excellent Support",
-        description: "Our team is available 24/7 to assist you with any issues.",
+        id: 4,
+        title: "Trusted by Customers",
+        icon: "🙌",
+        description: "With dozens of happy customers and growing, you're in good hands.",
     },
 ];
