@@ -1,71 +1,33 @@
-import { useState } from "react";
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 export default function Contact() {
-    const [form, setForm] = useState({ name: "", email: "", message: "" });
-
-    const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert("Message submitted! (Integrate with EmailJS or Formspree later)");
-        setForm({ name: "", email: "", message: "" });
-    };
-
     return (
-        <section className="bg-gray-100 py-16 px-6 md:px-12" id="contact">
-            <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
-                <p className="text-center text-gray-600 mb-10">
-                    Have a question or want to order a shoe? Reach out to us!
+        <section id="contact" className="bg-gray-100 py-14 px-6 md:px-12">
+            <div className="max-w-4xl mx-auto text-center">
+                <h2 className="sm:text-4xl text-3xl font-bold mb-4">Get in Touch</h2>
+                <p className="text-gray-600 mb-8">
+                    Have questions or want to place an order? Reach out directly through WhatsApp or Instagram.
                 </p>
-                <form onSubmit={handleSubmit} className="space-y-6 bg-white py-8 md:px-8 px-4  rounded-xl shadow-md">
-                    <input
-                        type="text"
-                        name="name"
-                        value={form.name}
-                        onChange={handleChange}
-                        placeholder="Your Name"
-                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="Your Email"
-                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                    />
-                    <textarea
-                        name="message"
-                        value={form.message}
-                        onChange={handleChange}
-                        placeholder="Your Message"
-                        rows="5"
-                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                    />
-                    <button
-                        type="submit"
-                        className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition cursor-pointer"
-                    >
-                        Send Message
-                    </button>
-                </form>
 
-                {/* Optional WhatsApp contact */}
-                <div className="text-center mt-6 text-base text-gray-600">
-                    Or chat with us directly on{" "}
+                <div className="flex justify-center gap-6">
                     <a
-                        href="https://wa.me/2348095723573"
+                        href="https://wa.me/234XXXXXXXXXX"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-green-600 font-medium underline"
+                        className="flex items-center gap-2 bg-green-500 text-white px-4 py-3 rounded-lg hover:bg-green-600 transition"
                     >
+                        <FaWhatsapp size={20} />
                         WhatsApp
+                    </a>
+
+                    <a
+                        href="https://instagram.com/yourusername"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-pink-600 text-white px-4 py-3 rounded-lg hover:bg-pink-700 transition"
+                    >
+                        <FaInstagram size={20} />
+                        Instagram
                     </a>
                 </div>
             </div>

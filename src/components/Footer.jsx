@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Logo / About */}
                 <div>
-                    <h3 className="text-2xl font-bold mb-3 italic">RomeoKicks</h3>
+                    <h3 className="text-2xl font-bold mb-3 italic">Romeos Kicks</h3>
                     <p className="text-sm text-gray-400">
                         Stylish shoes. Affordable prices. Delivered with care.
                     </p>
@@ -35,7 +35,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="text-center text-xs text-gray-500 mt-10 border-t pt-4 border-gray-700">
-                &copy; {new Date().getFullYear()} ShoeBay. All rights reserved.
+                &copy; {new Date().getFullYear()} <span className="text-gray-300">Romeos Kicks</span> . All rights reserved.
             </div>
         </footer>
     );

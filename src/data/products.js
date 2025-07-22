@@ -5,6 +5,7 @@ export const products = [
         category: "Sneakers",
         price: "₦18,000",
         image: "https://picsum.photos/seed/shoe1/300/300",
+        // image: "../assets/sporting_shoe_image.jpg",
     },
     {
         id: 2,

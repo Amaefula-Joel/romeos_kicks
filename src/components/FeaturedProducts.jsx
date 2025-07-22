@@ -36,7 +36,7 @@ export default function FeaturedProducts() {
     }, [filterKey]);
 
     return (
-        <section id="featured" className="py-12 px-6  bg-white">
+        <section id="featured" className="pt-12 pb-16 px-6  bg-white">
             <div className="md:container mx-auto">
                 <div className='flex flex-col items-center mb-10'>
                     <h2 className="sm:text-4xl text-3xl font-bold text-center mb-3">Featured Products</h2>

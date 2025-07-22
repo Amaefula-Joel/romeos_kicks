@@ -13,16 +13,16 @@ export default function Hero() {
             {/* Overlay Content */}
             <div className="relative z-10 max-w-4xl w-full sm:text-left text-center ">
                 <div>
-                    <h1 className="text-4xl md:text-7xl font-bold mb-4">
+                    <h1 className="text-4xl md:text-7xl font-bold mb-5">
                         Step Into Style With <br />
-                        <span className="mt-1 italic inline-block bg-gradient-to-r text-red-600 bg-clip-text drop-shadow-lg tracking-wide">
-                            Romeo Kicks
+                        <span className="script mt-1 inline-block text-red-600 drop-shadow-lg tracking-wide">
+                            Romeos Kicks
                         </span>
                     </h1>
-                    <p className="text-lg md:text-xl mb-6">Discover quality shoes for every occasion</p>
+                    <p className="text-lg md:text-xl mb-8">Discover quality shoes for every occasion</p>
                     <a
                         href="#contact"
-                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg transition"
+                        className="bg-red-500 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg font-semibold transition"
                     >
                         Shop Now
                     </a>

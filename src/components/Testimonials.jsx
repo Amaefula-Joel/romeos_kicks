@@ -7,9 +7,16 @@ import '../styles/testimonial.css';
 
 import { testimonials } from '../data/testimonials';
 
+import quoteIcon from '../assets/quotes.png';
+
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="py-16 bg-gray-100 px-6 md:px-12">
+        <section id="testimonials" className="py-16 bg-gray-100 px-6 md:px-12 relative">
+            <img 
+                src={quoteIcon}
+                alt="Quote"
+                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12"
+            />
             <div className="max-w-4xl mx-auto text-center">
                 
 
