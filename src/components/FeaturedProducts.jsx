@@ -53,7 +53,7 @@ export default function FeaturedProducts() {
 
     return (
         <section id="featured" className="pt-12 pb-16 px-6  bg-white">
-            <div className="md:container mx-auto">
+            <div className="max-w-6xl mx-auto">
                 <div className='flex flex-col items-center mb-10'>
                     <h2 className="sm:text-4xl text-3xl font-bold text-center mb-3">Featured Products</h2>
                     <div className='h-1 w-16 bg-red-600'></div>
@@ -95,8 +95,8 @@ export default function FeaturedProducts() {
                                             setLightboxOpen(true);
                                         }}
                                     />
-                                    <h3 className="text-xl font-semibold mb-1">{product.name}</h3>
-                                    <p className="text-red-600 text-xl font-semibold">{product.price}</p>
+                                    <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
+                                    <p className="text-red-600 text-base font-semibold">{product.price}</p>
                                 </div>
                             </div>
                         );
@@ -113,14 +113,14 @@ export default function FeaturedProducts() {
                     descriptionTextAlign: "center",
                     titleTextAlign: "center",
                 }}
-                styles={{
-                    image: {
-                        maxHeight: "70vh", 
-                        maxWidth: "400px", 
-                        objectFit: "contain", 
-                        background: "#fff", 
-                    }
-                }}
+                // styles={{
+                //     image: {
+                //         maxHeight: "70vh", 
+                //         maxWidth: "400px", 
+                //         objectFit: "contain", 
+                //         background: "#fff", 
+                //     }
+                // }}
 
                 on={{
                     view: ({ index }) => setLightboxIndex(index),

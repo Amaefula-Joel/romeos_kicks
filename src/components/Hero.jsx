@@ -2,7 +2,7 @@ import sportingShoe from '../assets/sporting_shoe_image.jpg';
 
 export default function Hero() {
     return (
-        <section className="relative bg-gray-900 text-white min-h-[400px] h-[90vh] flex items-center justify-center px-6 md:px-12">
+        <section className="relative bg-gray-900 text-white min-h-[340px] h-[90vh] flex items-center justify-center px-6 md:px-12">
             {/* Background Image */}
             <img
                 src={sportingShoe}
