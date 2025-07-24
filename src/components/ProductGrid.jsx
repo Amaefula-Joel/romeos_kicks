@@ -1,22 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 import Isotope from 'isotope-layout';
 import imagesLoaded from 'imagesloaded';
-import { products } from '../data/featuredProducts';
-
 import Lightbox from 'yet-another-react-lightbox';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
 import 'yet-another-react-lightbox/styles.css';
 import "yet-another-react-lightbox/plugins/captions.css";
 
+
 import '../styles/featuredProduct.css';
 
-const categories = ['All', ...new Set(products.map(p => p.category))];
-
-export default function FeaturedProducts() {
+export default function ProductGrid({ products, title = "Products" }) {
     const isotope = useRef(null);
     const [filterKey, setFilterKey] = useState('*');
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
+
+    const categories = ['All', ...new Set(products.map(p => p.category))];
 
     useEffect(() => {
         const grid = document.querySelector('.product-grid');
@@ -26,7 +25,7 @@ export default function FeaturedProducts() {
             layoutMode: 'fitRows',
         });
 
-        imagesLoaded(grid, () => { });
+        imagesLoaded(grid, () => isotope.current?.layout());
 
         return () => isotope.current?.destroy();
     }, []);
@@ -39,22 +38,20 @@ export default function FeaturedProducts() {
         }
     }, [filterKey]);
 
-    // Filtered products for lightbox navigation
     const filteredProducts = filterKey === '*'
         ? products
         : products.filter(product => product.category === filterKey);
 
-    // Prepare slides for Lightbox
     const slides = filteredProducts.map(product => ({
         src: product.image,
         title: product.name,
     }));
 
     return (
-        <section id="featured" className="pt-12 pb-16 px-6  bg-white">
+        <section className="pt-12 pb-7 px-6 bg-white">
             <div className="max-w-6xl mx-auto">
                 <div className='flex flex-col items-center mb-10'>
-                    <h2 className="sm:text-4xl text-3xl font-bold text-center mb-3">Featured Products</h2>
+                    <h2 className="sm:text-4xl text-3xl font-bold text-center mb-3">{title}</h2>
                     <div className='h-1 w-16 bg-red-600'></div>
                 </div>
 
@@ -77,7 +74,6 @@ export default function FeaturedProducts() {
                 {/* Product Grid */}
                 <div className="product-grid">
                     {products.map((product) => {
-                        // Find index in filteredProducts for correct navigation
                         const filteredIdx = filteredProducts.findIndex(p => p.id === product.id);
                         return (
                             <div
@@ -95,13 +91,13 @@ export default function FeaturedProducts() {
                                         }}
                                     />
                                     <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
-                                    {/* <p className="text-red-600 text-base font-semibold">{product.price}</p> */}
                                 </div>
                             </div>
                         );
                     })}
                 </div>
             </div>
+
             <Lightbox
                 open={lightboxOpen}
                 close={() => setLightboxOpen(false)}
@@ -112,7 +108,6 @@ export default function FeaturedProducts() {
                     descriptionTextAlign: "center",
                     titleTextAlign: "center",
                 }}
-
                 on={{
                     view: ({ index }) => setLightboxIndex(index),
                 }}
