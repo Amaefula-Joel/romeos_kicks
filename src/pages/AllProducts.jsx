@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import AllProductHero from '../components/AllProductHero';
 import Contact from '../components/Contact'
 import Footer from '../components/Footer';
 
@@ -21,6 +22,7 @@ export default function AllProducts() {
                 <Loader />
             ) : (
                 <>
+                    <AllProductHero />
                     <ProductGrid title="All Products" products={allProducts} />
                     <Contact />
                     <Footer />
